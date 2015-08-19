@@ -1,0 +1,27 @@
+<!-- 
+  Create tabs with an icon and label, using the tabs-positive style. 
+  Each tab's child <ion-nav-view> directive will have its own 
+  navigation history that also transitions its views in and out.
+-->
+<ion-tabs class="tabs-icon-top">
+
+
+  <!-- Dashboard Tab -->
+  <ion-tab title="主畫面" icon="icon ion-home" href="#/tab/main">
+    <ion-nav-view name="main-screen"></ion-nav-view>
+  </ion-tab>
+
+
+  <!-- Evaluation Tab -->
+  <ion-tab title="評估" icon="icon ion-heart" href="#/tab/evaluateoverall">
+    <ion-nav-view name="evaluation"></ion-nav-view>
+  </ion-tab>
+
+
+  <!-- Profile Tab -->
+  <ion-tab title="設定" icon="icon ion-gear-b" href="#/tab/profile">
+    <ion-nav-view name="profile"></ion-nav-view>
+  </ion-tab>
+
+
+</ion-tabs>

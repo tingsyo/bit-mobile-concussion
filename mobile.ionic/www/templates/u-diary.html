@@ -1,0 +1,12 @@
+﻿<ion-view title="我的身體微日記">
+  <ion-content class="padding">
+    <div class="list">
+        <a href="#" class="item" ng-repeat="diary in diaries" ng-click="showDiary(diary)">
+           {{diary.title}}
+        </a>
+    </div>
+    <div class="button-bar">
+        <a class="button" href="#" ng-click="newDiary()">新增日記<i class="icon ion-compose"></i></a>
+    </div>
+  </ion-content>
+</ion-view>

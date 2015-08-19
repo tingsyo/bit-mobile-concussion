@@ -1,0 +1,26 @@
+<section data-ng-controller="ApplogsController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Applogs</h1>
+    </div>
+    <div><button ng-click="exportApplogs()">匯出資料</button> </div>
+    <div class="list-group">
+        <a data-ng-repeat="applog in applogs" data-ng-href="#!/applogs/{{applog._id}}" class="list-group-item">
+    			<small class="list-group-item-text">
+    				<b>Synced on:</b>
+    				<span data-ng-bind="applog.created | date:'yyyy/MM/dd HH:mm:ss'"></span>
+    				<b>by:</b>
+    				<span data-ng-bind="applog.userid"></span>
+            <b>overall-score:</b>
+            <span data-ng-bind="applog.overall"></span>
+    			</small>
+        </a>
+    </div>
+    <!--
+    <div class="alert alert-warning text-center" data-ng-hide="!applogs.$resolved || applogs.length">
+    	No Applogs yet, why don't you <a href="/#!/applogs/create">create one</a>?
+    </div>
+    -->
+    <div class="alert alert-warning text-center" data-ng-hide="!applogs.$resolved || applogs.length">
+      目前沒有使用記錄
+    </div>
+</section>

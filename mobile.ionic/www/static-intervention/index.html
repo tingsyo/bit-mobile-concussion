@@ -1,0 +1,477 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>認識腦震盪症候群</title>
+    <!-- jQuery Mobile -->
+    <link rel="stylesheet" href="lib/jquery.mobile-1.4.5.min.css" />
+    <script src="lib/jquery-1.8.2.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.5.min.js"></script> 
+    <!-- /jQuery Mobile -->
+    <!-- Custom Add-on -->
+    <link rel="stylesheet" href="lib/concussion.css" />
+    <script src="lib/concussion.js"></script>
+    <!-- /Custom Add-on -->
+</head>
+<body>
+<!-- Lv0: Cover -->
+<div data-role="page" id="home">
+    <div data-role="header"  data-position="fixed">
+        <h1>認識腦震盪症候群</h1>
+        <div data-role="navbar" id="navbar">
+        <ul>
+            <li><a href="#home" data-icon="home" data-transition="flip" data-theme="a">首頁</a></li>
+            <li><a href="#symptoms" data-icon="grid" data-transition="slidedown" data-theme="a">症狀</a></li>
+            <li><a href="#physical" data-icon="info" data-transition="slidedown" data-theme="a">瀏覽</a></li>
+
+         </ul>
+        </div>
+    </div><!-- /header -->
+    <div data-role="content">
+        <p align="center"><img src="images/title.png" width="280" /></p>
+        <p>輕度頭部外傷患者一開始常會有頭痛、頭暈、容易疲倦、失眠等身體上的抱怨；後來以記憶力變差、注意力無法集中、易怒等情緒困擾為主，這些症狀可備統稱為「腦震盪症候群」。</p>
+		<p>幸運的是，多數輕度頭部外傷患者在受傷後<em>三個月內</em>，即可恢復到受傷前的狀態。</p>
+    </div><!-- /content -->
+ 
+    <div data-role="footer" data-position="fixed">
+        <p id="footer"><img id="footer" src="images/logo_transparent.png"/>長庚大學行為科學所臨床心理學組</p>
+    </div><!-- /footer -->
+</div><!-- /page -->
+
+
+<!-- Lv1-1: Symptomes --> 
+<div data-role="page" id="symptoms">
+    <div data-role="header" data-position="fixed">
+        <h1>症狀</h1>
+        <div data-role="navbar" id="navbar">
+        <ul>
+            <li><a href="#home" data-icon="home" data-transition="flip" data-theme="a">首頁</a></li>
+            <li><a href="#symptoms" data-icon="grid" data-transition="slidedown" data-theme="a">症狀</a></li>
+            <li><a href="#physical" data-icon="info" data-transition="slidedown" data-theme="a">瀏覽</a></li>
+
+         </ul>
+        </div>
+    </div><!-- /header -->
+    <div data-role="content" align="center">
+        <p>受傷後兩星期內的症狀：</p>
+        <table><tbody>
+        <tr><td colspan="2"><div id="top3" class="top-symptom">
+            <a href="#physical" data-transition="slide" data-role="button">45% 頭暈</a>
+            <a href="#physical" data-transition="slide" data-role="button">20% 頭痛</a>
+            <a href="#physical" data-transition="slide" data-role="button">14% 容易疲倦</a>
+        </div></td></tr>
+        <tr><td width="50%"><div class="rare-symptom">
+            <a href="#attention" data-transition="slide" data-role="button">7% 難以專注</a>
+            <a href="#sleep" data-transition="slide" data-role="button">5% 失眠</a>
+            <a href="#memory" data-transition="slide" data-role="button">4% 記性變差</a>
+            <a href="#physical" data-transition="slide" data-role="button">4% 失去活力</a>
+        </div></td>
+        <td width="50%"><div class="rare-symptom">
+            <a href="#emotion" data-transition="slide" data-role="button">3% 易怒</a>
+            <a href="#physical" data-transition="slide" data-role="button">3% 噁心</a>
+            <a href="#emotion" data-transition="slide" data-role="button">3% 焦慮</a>
+            <a href="#emotion" data-transition="slide" data-role="button">1% 憂鬱</a>
+        </div></td></tr>
+        <tr><td colspan="2"><div class="rare-symptom">
+            <a href="#stress" data-transition="slide" data-role="button">壓力調適</a>
+        </div></td></tr>
+        </tbody></table>
+    </div><!-- /content -->
+    <div data-role="footer" data-position="fixed">
+        <p id="footer"><img id="footer" src="images/logo_transparent.png"/>長庚大學行為科學所臨床心理學組</p>
+    </div><!-- /footer -->
+</div><!-- /page -->
+
+<!-- Lv2-1: Physical -->
+<!-- 1.0: Physical --> 
+<div data-role="page" id="physical">
+    <div data-role="header" data-position="fixed">
+        <a href="#stress" id="previous-page" class="ui-btn-left" data-role="button" 
+                data-icon="arrow-l" data-transition="reverse slide" data-iconpos="notext"></a> 
+        <h1>身體病痛不要來</h1>
+        <a href="#attention" id="next-page" class="ui-btn-right" data-role="button" 
+                data-icon="arrow-r" data-iconpos="notext" data-transition="slide"></a> 
+        <div data-role="navbar" id="navbar">
+        <ul>
+            <li><a href="#home" data-icon="home" data-transition="flip" data-theme="a">首頁</a></li>
+            <li><a href="#symptoms" data-icon="grid" data-transition="slidedown" data-theme="a">症狀</a></li>
+            <li><a href="#physical" data-icon="info" data-transition="slidedown" data-theme="a">瀏覽</a></li>
+
+         </ul>
+        </div>
+    </div><!-- /header -->
+    <div data-role="content" class="section">
+        <h2 class="section-title">身體病痛不要來</h2>
+        <p class="cparagraph">頭痛、頭暈、容易疲倦是腦震盪後最常見的身體症狀。在受傷後一個月內，最重要的是讓大腦多休息，減少大腦的負擔。建議您把握下列三個重點：</p>
+        <div class="subsection-title"><a href="#physicalsub1" data-role="button" data-rel="dialog" data-transition="slidedown">循序漸進</a></div>
+        <div class="subsection-title"><a href="#physicalsub2" data-role="button" data-rel="dialog" data-transition="slidedown">欲速則不達</a></div>
+        <div class="subsection-title"><a href="#physicalsub3" data-role="button" data-rel="dialog" data-transition="slidedown">適合您的休息方式</a></div>
+    </div><!-- /content -->
+    <div data-role="footer" data-position="fixed">
+        <p id="footer"><img id="footer" src="images/logo_transparent.png"/>長庚大學行為科學所臨床心理學組</p>
+    </div><!-- /footer -->
+</div><!-- /page -->
+<!-- 1.1 --> 
+<div data-role="page" id="physicalsub1">
+    <div data-role="header" data-position="fixed">
+        <h1>身體病痛不要來</h1>
+    </div><!-- /header -->
+    <div data-role="content" class="subsection">
+        <h2>循序漸進</h2>
+        <p>建議您在這段休養的期間內，工作的難度應該要逐漸增加，千萬不要急於要求自己馬上恢復至受傷前的表現。</p>
+    </div><!-- /content -->
+    <div data-role="footer" data-position="fixed">
+        <p id="footer"><img id="footer" src="images/logo_transparent.png"/>長庚大學行為科學所臨床心理學組</p>
+    </div><!-- /footer -->
+</div><!-- /page -->
+<!-- 1.2 --> 
+<div data-role="page" id="physicalsub2">
+    <div data-role="header" data-position="fixed">
+        <h1>身體病痛不要來</h1>
+    </div><!-- /header -->
+    <div data-role="content" class="subsection">
+        <h2>欲速則不達</h2>
+        <p>這段期間要盡量避免增加大腦的負擔。當您一感到疲累時，請馬上放下手邊工作，讓大腦休息一下再繼續工作。</p>
+    </div><!-- /content -->
+    <div data-role="footer" data-position="fixed">
+        <p id="footer"><img id="footer" src="images/logo_transparent.png"/>長庚大學行為科學所臨床心理學組</p>
+    </div><!-- /footer -->
+</div><!-- /page -->
+<!-- 1.3 --> 
+<div data-role="page" id="physicalsub3">
+    <div data-role="header" data-position="fixed">
+        <h1>身體病痛不要來</h1>
+    </div><!-- /header -->
+    <div data-role="content" class="subsection">
+        <h2>適合您的休息方式</h2>
+        <p>建議從過去經驗中找出您感到最放鬆、無負擔且無需耗費腦力的活動，做為您的休息方式最合適。</p>
+    </div><!-- /content -->
+    <div data-role="footer" data-position="fixed">
+        <p id="footer"><img id="footer" src="images/logo_transparent.png"/>長庚大學行為科學所臨床心理學組</p>
+    </div><!-- /footer -->
+</div><!-- /page -->
+<!-- /1.0: Physical --> 
+
+
+<!-- 2.0: Attention --> 
+<div data-role="page" id="attention">
+    <div data-role="header" data-position="fixed">
+        <a href="#physical" id="previous-page" class="ui-btn-left" data-role="button" 
+                data-icon="arrow-l" data-iconpos="notext" data-transition="reverse slide"></a> 
+        <h1>注意力</h1>
+        <a href="#memory" id="next-page" class="ui-btn-right" data-role="button" 
+                data-icon="arrow-r" data-iconpos="notext" data-transition="slide"></a> 
+        <div data-role="navbar" id="navbar">
+        <ul>
+            <li><a href="#home" data-icon="home" data-transition="flip" data-theme="a">首頁</a></li>
+            <li><a href="#symptoms" data-icon="grid" data-transition="slidedown" data-theme="a">症狀</a></li>
+            <li><a href="#physical" data-icon="info" data-transition="slidedown" data-theme="a">瀏覽</a></li>
+
+         </ul>
+        </div>
+    </div><!-- /header -->
+    <div data-role="content" align="center">
+        <h2 class="section-title">頭腦補給站：注意力</h2>
+        <p class="cparagraph">受傷後，注意力無法集中是常見的情形。可利用底下這些方法來改善注意力：</p>
+        <div class="subsection-title"><a href="#attentionsub1" data-role="button" data-rel="dialog" data-transition="slidedown">當個好奇寶寶</a></div>
+        <div class="subsection-title"><a href="#attentionsub2" data-role="button" data-rel="dialog" data-transition="slidedown">減少干擾</a></div>
+        <div class="subsection-title"><a href="#attentionsub3" data-role="button" data-rel="dialog" data-transition="slidedown">利用小幫手</a></div>
+    </div><!-- /content -->
+    <div data-role="footer" data-position="fixed">
+        <p id="footer"><img id="footer" src="images/logo_transparent.png"/>長庚大學行為科學所臨床心理學組</p>
+    </div><!-- /footer -->
+</div><!-- /page --> 
+<!-- 2.1 --> 
+<div data-role="page" id="attentionsub1">
+    <div data-role="header">
+        <h1>頭腦補給站：注意力</h1>
+    </div><!-- /header -->
+    <div data-role="content" class="subsection">
+        <h2>當個好奇寶寶</h2>
+        <p>想要記下重要的事情時，在心裡頭提出許多相關的疑問，有助於更專注眼前，來幫助您記得更多。</p>
+    </div><!-- /content -->
+    <div data-role="footer">
+        <p id="footer"><img id="footer" src="images/logo_transparent.png"/>長庚大學行為科學所臨床心理學組</p>
+    </div><!-- /footer -->
+</div><!-- /page -->
+<!-- 2.2 --> 
+<div data-role="page" id="attentionsub2">
+    <div data-role="header">
+        <h1>頭腦補給站：注意力</h1>
+    </div><!-- /header -->
+    <div data-role="content" class="subsection">
+        <h2>減少干擾</h2>
+        <p>將有限的精力放在重要事件上，盡量排除其他不必要的干擾，也不要同一時間做太多事。</p>
+    </div><!-- /content -->
+    <div data-role="footer">
+        <p id="footer"><img id="footer" src="images/logo_transparent.png"/>長庚大學行為科學所臨床心理學組</p>
+    </div><!-- /footer -->
+</div><!-- /page -->
+<!-- 2.3 --> 
+<div data-role="page" id="attentionsub3">
+    <div data-role="header">
+        <h1>頭腦補給站：注意力</h1>
+    </div><!-- /header -->
+    <div data-role="content" class="subsection">
+        <h2>利用小幫手</h2>
+        <p>用行事曆規畫行程，確保您會記得重要事件，無須分神去操心是否遺漏些什麼。</p>
+    </div><!-- /content -->
+    <div data-role="footer">
+        <p id="footer"><img id="footer" src="images/logo_transparent.png"/>長庚大學行為科學所臨床心理學組</p>
+    </div><!-- /footer -->
+</div><!-- /page -->
+<!-- /2.0: Attention --> 
+
+
+<!-- 3.0: Memory --> 
+<div data-role="page" id="memory">
+    <div data-role="header" data-position="fixed">
+        <a href="#attention" id="previous-page" class="ui-btn-left" data-role="button" 
+                data-icon="arrow-l" data-iconpos="notext" data-transition="reverse slide"></a> 
+        <h1>記憶力</h1>
+        <a href="#emotion" id="next-page" class="ui-btn-right" data-role="button" 
+                data-icon="arrow-r" data-iconpos="notext" data-transition="slide"></a> 
+        <div data-role="navbar" id="navbar">
+        <ul>
+            <li><a href="#home" data-icon="home" data-transition="flip" data-theme="a">首頁</a></li>
+            <li><a href="#symptoms" data-icon="grid" data-transition="slidedown" data-theme="a">症狀</a></li>
+            <li><a href="#physical" data-icon="info" data-transition="slidedown" data-theme="a">瀏覽</a></li>
+
+         </ul>
+        </div>
+    </div><!-- /header -->
+    <div data-role="content" align="center">
+        <h2 class="section-title">頭腦補給站：記憶力</h2>
+        <p class="cparagraph">若您有記性變差的情形，可試試看下列方法來改善記憶的問題：</p>
+        <div class="subsection-title"><a href="#memorysub1" data-role="button" data-rel="dialog" data-transition="slidedown">複誦</a></div>
+        <div class="subsection-title"><a href="#memorysub2" data-role="button" data-rel="dialog" data-transition="slidedown">心像</a></div>
+        <div class="subsection-title"><a href="#memorysub3" data-role="button" data-rel="dialog" data-transition="slidedown">利用想像力</a></div>
+    </div><!-- /content -->
+ 
+    <div data-role="footer" data-position="fixed">
+        <p id="footer"><img id="footer" src="images/logo_transparent.png"/>長庚大學行為科學所臨床心理學組</p>
+    </div><!-- /footer -->
+</div><!-- /page --> 
+<!-- 3.1 --> 
+<div data-role="page" id="memorysub1">
+    <div data-role="header">
+        <h1>頭腦補給站：記憶力</h1>
+    </div><!-- /header -->
+    <div data-role="content" class="subsection">
+        <h2>複誦</h2>
+        <p>藉由多次默唸來加深印象。</p>
+    </div><!-- /content -->
+    <div data-role="footer">
+        <p id="footer"><img id="footer" src="images/logo_transparent.png"/>長庚大學行為科學所臨床心理學組</p>
+    </div><!-- /footer -->
+</div><!-- /page -->
+<!-- 3.2 --> 
+<div data-role="page" id="memorysub2">
+    <div data-role="header">
+        <h1>頭腦補給站：記憶力</h1>
+    </div><!-- /header -->
+    <div data-role="content" class="subsection">
+        <h2>心像</h2>
+        <p>在腦海裡想像一個畫面來強化印象，想像畫面越是具體鮮明，越能幫助您事後回想。 </p>
+    </div><!-- /content -->
+    <div data-role="footer">
+        <p id="footer"><img id="footer" src="images/logo_transparent.png"/>長庚大學行為科學所臨床心理學組</p>
+    </div><!-- /footer -->
+</div><!-- /page -->
+<!-- 3.3 --> 
+<div data-role="page" id="memorysub3">
+    <div data-role="header">
+        <h1>頭腦補給站：記憶力</h1>
+    </div><!-- /header -->
+    <div data-role="content" class="subsection">
+        <h2>利用想像力</h2>
+        <p>將新的資訊與原先熟悉的事物做連結，回想時便可利用熟悉的事物來幫助您回溯新資訊。</p>
+    </div><!-- /content -->
+    <div data-role="footer">
+        <p id="footer"><img id="footer" src="images/logo_transparent.png"/>長庚大學行為科學所臨床心理學組</p>
+    </div><!-- /footer -->
+</div><!-- /page -->
+<!-- /3.0: Memory --> 
+
+
+<!-- 4.0: Emotion --> 
+<div data-role="page" id="emotion">
+    <div data-role="header" data-position="fixed">
+        <a href="#memory" id="previous-page" class="ui-btn-left" data-role="button" 
+                data-icon="arrow-l" data-iconpos="notext" data-transition="reverse slide"></a> 
+        <h1>揮別壞心情</h1>
+        <a href="#sleep" id="next-page" class="ui-btn-right" data-role="button" 
+                data-icon="arrow-r" data-iconpos="notext" data-transition="slide"></a> 
+        <div data-role="navbar" id="navbar">
+        <ul>
+            <li><a href="#home" data-icon="home" data-transition="flip" data-theme="a">首頁</a></li>
+            <li><a href="#symptoms" data-icon="grid" data-transition="slidedown" data-theme="a">症狀</a></li>
+            <li><a href="#physical" data-icon="info" data-transition="slidedown" data-theme="a">瀏覽</a></li>
+
+         </ul>
+        </div>
+    </div><!-- /header -->
+    <div data-role="content" align="center">
+        <h2 class="section-title">揮別壞心情</h2>
+        <p class="cparagraph">頭部外傷後，您是否容易感到心情低落、焦慮不安，或不耐煩的情形增加了呢？</p>
+        <div class="subsection-title"><a href="#emotionsub1" data-role="button" data-rel="dialog" data-transition="slidedown">低落、焦慮</a></div>
+        <div class="subsection-title"><a href="#emotionsub2" data-role="button" data-rel="dialog" data-transition="slidedown">憤怒</a></div>
+    </div><!-- /content -->
+ 
+    <div data-role="footer" data-position="fixed">
+        <p id="footer"><img id="footer" src="images/logo_transparent.png"/>長庚大學行為科學所臨床心理學組</p>
+    </div><!-- /footer -->
+</div><!-- /page --> 
+<!-- 4.1 --> 
+<div data-role="page" id="emotionsub1">
+    <div data-role="header">
+        <h1>揮別壞心情</h1>
+    </div><!-- /header -->
+    <div data-role="content" class="subsection">
+        <h2>低落、焦慮</h2>
+        <p>若您覺察到自己陷入負面想法的迴圈中的時候，請告訴自己<em>「停！」</em>，並且回過頭思考，事情是否真如您所想像的那麼糟，在日常生活中，也可多安排一些感興趣的活動，以提升低落心情。</p>
+    </div><!-- /content -->
+    <div data-role="footer">
+        <p id="footer"><img id="footer" src="images/logo_transparent.png"/>長庚大學行為科學所臨床心理學組</p>
+    </div><!-- /footer -->
+</div><!-- /page -->
+<!-- 4.2 --> 
+<div data-role="page" id="emotionsub2">
+    <div data-role="header">
+        <h1>揮別壞心情</h1>
+    </div><!-- /header -->
+    <div data-role="content" class="subsection">
+        <h2>憤怒</h2>
+        <p>發怒的原因通常是來自於疲倦感，因此，當您感到疲累不堪時，不妨重新調整行程表與步調，以避免負擔過重。而保持冷靜是問題解決的第一步，嘗試提醒自己「等三秒再開口」，並選擇適當的語氣及時機表達您的看法，或動腦想想其他解決辦法，皆有助於解決問題。 </p>
+    </div><!-- /content -->
+    <div data-role="footer">
+        <p id="footer"><img id="footer" src="images/logo_transparent.png"/>長庚大學行為科學所臨床心理學組</p>
+    </div><!-- /footer -->
+</div><!-- /page -->
+<!-- /4.0: Emotion --> 
+
+
+<!-- 5.0: Sleep --> 
+<div data-role="page" id="sleep">
+    <div data-role="header" data-position="fixed">
+        <a href="#emotion" id="previous-page" class="ui-btn-left" data-role="button" 
+                data-icon="arrow-l" data-iconpos="notext" data-transition="reverse slide"></a> 
+        <h1>夜夜好眠</h1>
+        <a href="#stress" id="next-page" class="ui-btn-right" data-role="button" 
+                data-icon="arrow-r" data-iconpos="notext" data-transition="slide"></a> 
+        <div data-role="navbar" id="navbar">
+        <ul>
+            <li><a href="#home" data-icon="home" data-transition="flip" data-theme="a">首頁</a></li>
+            <li><a href="#symptoms" data-icon="grid" data-transition="slidedown" data-theme="a">症狀</a></li>
+            <li><a href="#physical" data-icon="info" data-transition="slidedown" data-theme="a">瀏覽</a></li>
+
+         </ul>
+        </div>
+    </div><!-- /header -->
+    <div data-role="content" align="center">
+        <h2 class="section-title">夜夜好眠</h2>
+        <p class="cparagraph">假如您有入睡困難、早醒、或睡眠品質不佳等情形，建議依照下列睡眠好習慣，以改善睡眠品質：</p><br/>
+        <ul data-role="listview" >
+            <li>睡前放鬆練習。</li>
+            <li>減少會破壞睡眠的聲音和光線。</li>
+            <li>千萬不要在床上進行睡覺或性行為以外的事。</li>
+            <li>睡前八小時避免食用刺激性或含咖啡因的食物。</li>
+            <li>建立規律的作息，固定入睡及起床時間，且白天盡量不要小睡或補眠。</li>
+            <li>若躺在床上十五分鐘仍未入睡，就離開床鋪並做些安靜或無趣的活動，等到有睡意再回床上睡覺。</li>
+        </ul>
+    </div><!-- /content -->
+    <div data-role="footer" data-position="fixed">
+        <p id="footer"><img id="footer" src="images/logo_transparent.png"/>長庚大學行為科學所臨床心理學組</p>
+    </div><!-- /footer -->
+</div><!-- /page --> 
+<!-- /5.0: Sleep --> 
+
+
+<!-- 6.0: Stress --> 
+<div data-role="page" id="stress">
+    <div data-role="header" data-position="fixed">
+        <a href="#sleep" id="previous-page" class="ui-btn-left" data-role="button" 
+                data-icon="arrow-l" data-iconpos="notext" data-transition="reverse slide"></a> 
+        <h1>幫壓力減重</h1>
+        <a href="#physical" id="next-page" class="ui-btn-right" data-role="button" 
+                data-icon="arrow-r" data-iconpos="notext" data-transition="slide"></a> 
+        <div data-role="navbar" id="navbar">
+        <ul>
+            <li><a href="#home" data-icon="home" data-transition="flip" data-theme="a">首頁</a></li>
+            <li><a href="#symptoms" data-icon="grid" data-transition="slidedown" data-theme="a">症狀</a></li>
+            <li><a href="#physical" data-icon="info" data-transition="slidedown" data-theme="a">瀏覽</a></li>
+
+         </ul>
+        </div>
+    </div><!-- /header -->
+    <div data-role="content" align="center">
+        <h2 class="section-title">幫壓力減重</h2>
+        <p class="cparagraph">人們面對壓力事件時，會考量該壓力事件、環境限制或可運用之資源、及自身的能力水準，再根據整體評估結果選擇合宜的壓力因應方式：</p>
+        <div class="subsection-title"><a href="#stresssub1" data-role="button" data-rel="dialog" data-transition="slidedown">問題解決導向</a></div>
+        <div class="subsection-title"><a href="#stresssub2" data-role="button" data-rel="dialog" data-transition="slidedown">情緒焦點導向</a></div>
+        <p class="cparagraph">而這段期間內除個人壓力調適之外，<em>「週遭重要他人」</em>的支持與陪伴亦相當重要，有助於患者受傷後的恢復。</p>
+    </div><!-- /content -->
+ 
+    <div data-role="footer" data-position="fixed">
+        <p id="footer"><img id="footer" src="images/logo_transparent.png"/>長庚大學行為科學所臨床心理學組</p>
+    </div><!-- /footer -->
+</div><!-- /page --> 
+<!-- 6.1 --> 
+<div data-role="page" id="stresssub1">
+    <div data-role="header">
+        <h1>幫壓力減重</h1>
+    </div><!-- /header -->
+    <div data-role="content" class="subsection">
+        <h2>問題解決導向</h2>
+        <p>若認為壓力事件能被解決，宜採用問題解決導向，消除壓力的根源。</p>
+    </div><!-- /content -->
+    <div data-role="footer">
+        <p id="footer"><img id="footer" src="images/logo_transparent.png"/>長庚大學行為科學所臨床心理學組</p>
+    </div><!-- /footer -->
+</div><!-- /page -->
+<!-- 6.2 --> 
+<div data-role="page" id="stresssub2">
+    <div data-role="header">
+        <h1>幫壓力減重</h1>
+    </div><!-- /header -->
+    <div data-role="content" class="subsection">
+        <h2>情緒焦點導向</h2>
+        <p>若壓力事件不易被處理，則傾向採用情緒焦點導向，調適壓力事件帶來的負面感受。 </p>
+    </div><!-- /content -->
+    <div data-role="footer">
+        <p id="footer"><img id="footer" src="images/logo_transparent.png"/>長庚大學行為科學所臨床心理學組</p>
+    </div><!-- /footer -->
+</div><!-- /page -->
+<!-- /6.0: Emotion --> 
+
+
+<!-- Contact --> 
+<div data-role="page" id="contact">
+    <div data-role="header">
+        <h1>與我們聯絡</h1>
+        <div data-role="navbar" id="navbar">
+        <ul>
+            <li><a href="#home" data-icon="home" data-transition="flip" data-theme="a">首頁</a></li>
+            <li><a href="#symptoms" data-icon="grid" data-transition="slidedown" data-theme="a">症狀</a></li>
+            <li><a href="#physical" data-icon="info" data-transition="slidedown" data-theme="a">瀏覽</a></li>
+
+         </ul>
+        </div>
+    </div><!-- /header -->
+    <div data-role="content" align="center">
+        <h2 class="section-title">與我們聯絡</h2>
+        <ul data-role="listview" >
+            <li><a href="tel:88632118800">打電話：(03)211-8800 #5732</a></li>
+            <li><a href="mailto:ajin612@gmail.com?Subject=MobileConcussion">電子郵件：ajin612@gmail.com</a></li>
+        </ul>
+		<br/>
+        <p  class="cparagraph">而這段期間內除個人壓力調適之外，<em>「週遭重要他人」</em>的支持與陪伴亦相當重要，有助於患者受傷後的恢復。</p>
+    </div><!-- /content -->
+    <div data-role="footer">
+        <p id="footer"><img id="footer" src="images/logo_transparent.png"/>長庚大學行為科學所臨床心理學組</p>
+    </div><!-- /footer -->
+</div><!-- /page -->
+
+</body>
+</html>

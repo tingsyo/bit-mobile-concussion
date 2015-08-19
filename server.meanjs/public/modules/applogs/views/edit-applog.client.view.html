@@ -1,0 +1,34 @@
+<section data-ng-controller="ApplogsController" data-ng-init="findOne()">
+    <div class="page-header">
+        <h1>Edit Applog</h1>
+    </div>
+    <div class="list-group">
+        <div class="list-group-item">
+          <label>User ID: </label>
+          <span data-ng-bind="applog.userid"></span>
+        </div>
+        <div class="list-group-item">
+          <label>Overall Score: </label>
+          <span data-ng-bind="applog.overall"></span>
+        </div>
+        <a data-ng-repeat="symptom in applog.symptoms" class="list-group-item"> {{symptom}} </a>
+    </div>
+    <div class="col-md-12">
+        <form class="form-horizontal" data-ng-submit="update()" novalidate>
+            <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="name">User ID</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="applog.userid" id="userid" class="form-control" placeholder="User ID" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Update" class="btn btn-default">
+                </div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+            </fieldset>
+        </form>
+    </div>
+</section>

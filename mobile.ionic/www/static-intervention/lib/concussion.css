@@ -1,0 +1,40 @@
+/* concussion.css
+*    - customized css for the concussion project
+*/
+img#footer {
+    padding-right: 5px;
+    height:12px;
+    text-align: center;
+}
+
+p#footer {
+    text-align: center;
+    font-size: 75%;
+}
+
+em {
+	font-size: 150%;
+	font-weight: bold;
+}
+
+h2.section-title {
+    text-align: center;	
+}
+
+a .subsection-title {
+	font-size: 180%;
+	font-wriht: bold;
+}
+
+.cparagraph {
+	margin: 6px;
+	text-align: left;
+}
+
+/* Symptom list */
+.top-symptom {
+	font-size:120%;
+}
+.rare-symptom {
+    font-size:80%;
+}

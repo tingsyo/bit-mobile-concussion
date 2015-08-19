@@ -1,0 +1,34 @@
+﻿<ion-view title="設定">
+  <ion-content class="padding">
+    <div class="list">
+        <div class="item-divider">登錄資料</div>
+        <a href="#" class="item item-icon-left">
+            <i class="icon ion-person"></i>
+            編號：<span ng-bind="userinfo.id"></span>
+        </a>
+        <a href="#" class="item item-icon-left">
+            <i class="icon ion-ios-calendar"></i>
+            受傷日期：<span ng-bind="userinfo.incidentDate|date:'yyyy-MM-dd'"></span>
+        </a>
+        <a href="#" class="item item-icon-left">
+            <i class="icon ion-ios-medkit"></i>
+            PCS症狀：<span ng-bind="userinfo.symptoms"></span>
+        </a>
+    </div>
+    <div class="button-bar">
+        <!--<a class="button" href="#/tab/login">修改資料</a>-->
+        <a class="button" href="#" ng-click="showHistory()">記錄回顧</a>
+    </div>
+    <div id="history" class="list">
+        <div id="instructions" ng-show="isHistoryShown" style="text-wrap:supress; padding:6px;">
+            本週記錄發現，目前最令您不舒服/困擾的症狀是<b>{{ sympI.name }}</b>，而最常發生的症狀是<b>{{ sympF.name }}</b>。
+        </div>
+        <div id="historyFigure" class="item">
+            <nvd3 id="historyFigure" options="figureOptions" data="figureData"></nvd3>
+        </div>
+        <div id="historyFigure2" class="item">
+            <nvd3 id="historyFigure2" options="figureOptions2" data="figureData2"></nvd3>
+        </div>
+    </div>
+  </ion-content>
+</ion-view>

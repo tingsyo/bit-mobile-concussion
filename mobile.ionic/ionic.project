@@ -1,0 +1,10 @@
+{
+  "name": "drmobile",
+  "app_id": "baf8a6e3",
+  "proxies": [
+    {
+      "path": "/applogs",
+      "proxyUrl": "http://localhost:3300/applogs"
+    }
+  ]
+}

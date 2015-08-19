@@ -1,0 +1,21 @@
+<section data-ng-controller="ArticlesController" data-ng-init="find()">
+	<div class="page-header">
+		<h1>Articles</h1>
+	</div>
+	<div><button ng-click="exportArticles()">匯出資料</button> </div>
+	<div class="list-group">
+		<a data-ng-repeat="article in articles" data-ng-href="#!/articles/{{article._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				<b>Synced on:</b>
+				<span data-ng-bind="article.created | date:'yyyy/MM/dd HH:mm:ss'"></span>
+				<b>by:</b>
+				<span data-ng-bind="article.userid"></span>
+				<b>title:</b>
+				<span data-ng-bind="applog.title | date:'yyyy/MM/dd HH:mm:ss'"></span>
+			</small>
+		</a>
+	</div>
+	<div class="alert alert-warning text-center" data-ng-if="articles.$resolved && !articles.length">
+		目前沒有使用記錄
+	</div>
+</section>

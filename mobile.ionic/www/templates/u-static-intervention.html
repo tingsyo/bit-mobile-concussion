@@ -1,0 +1,31 @@
+﻿<ion-view title="認識腦震盪症候群">
+    <ion-content class="padding">
+        <p>輕度頭部外傷患者一開始常會有頭痛、頭暈、容易疲倦、失眠等身體上的抱怨；後來以記憶力變差、注意力無法集中、易怒等情緒困擾為主，這些症狀可備統稱為「腦震盪症候群」。</p><p>幸運的是，多數輕度頭部外傷患者在受傷後<em>三個月內</em>，即可恢復到受傷前的狀態。</p>
+        <ion-list>
+            <div ng-repeat='ci in intContent'>
+                <ion-item class="item-positive" ng-click="toggleGroup(ci)" ng-class="{active: isCiShown(ci)}">
+                    {{ci.title}}
+                </ion-item>
+                <ion-item class="item-stable item-text-wrap" ng-show="isGroupShown(ci)">
+                    {{ci.content}}
+                </ion-item>
+                <ion-item class="item-accordion" ng-repeat="item in ci.children" ng-show="isGroupShown(ci)" ng-click="showAlert(item)">
+                    {{item.title}}
+                </ion-item>
+            </div>
+        </ion-list>
+        <!--
+        <p>輕度頭部外傷患者一開始常會有頭痛、頭暈、容易疲倦、失眠等身體上的抱怨；後來以記憶力變差、注意力無法集中、易怒等情緒困擾為主，這些症狀可備統稱為「腦震盪症候群」。</p><p>幸運的是，多數輕度頭部外傷患者在受傷後<em>三個月內</em>，即可恢復到受傷前的狀態。</p>
+        <button class="button icon-right icon-plus-circled button-block button-stable" ng-class="{'icon-minus-circled': isCi1Open, 'icon-plus-circled': !isCi1Open}" ng-click="isCi1Open = !isCi1Open">身體病痛不要來</button>
+        <div ng-show="isCi1Open" id="ci1">
+            <i class="icon" ng-class="{'icon-minus-circled': isCi1Open, 'icon-plus-circled': !isCi1Open}"></i>
+            <p>頭痛、頭暈、容易疲倦是腦震盪後最常見的身體症狀。在受傷後一個月內，最重要的是讓大腦多休息，減少大腦的負擔。建議您把握下列三個重點：</p>
+            <div class="list list-inset">
+                <div class="item">循序漸進</div>
+                <div class="item">欲速則不達</div>
+                <div class="item">適合您的休息方式</div>
+            </div>
+        </div>  
+        -->
+    </ion-content>
+</ion-view>

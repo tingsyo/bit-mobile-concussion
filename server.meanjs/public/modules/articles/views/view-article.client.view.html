@@ -1,0 +1,22 @@
+<section data-ng-controller="ArticlesController" data-ng-init="findOne()">
+	<div class="page-header">
+		<h1 data-ng-bind="article.title | date:'yyyy/MM/dd HH:mm:ss'"></h1>
+	</div>
+	<p data-ng-bind="article.content"></p>
+	<div class="pull-right" data-ng-show="true">
+		<a class="btn btn-primary" href="/#!/articles/{{article._id}}/edit">
+			<i class="glyphicon glyphicon-edit"></i>
+		</a>
+		<a class="btn btn-primary" data-ng-click="remove();">
+			<i class="glyphicon glyphicon-trash"></i>
+		</a>
+	</div>
+	<small>
+		<em class="text-muted">
+			Synced on
+			<span data-ng-bind="article.created | date:'mediumDate'"></span>
+			by
+			<span data-ng-bind="article.userid"></span>
+		</em>
+	</small>
+</section>

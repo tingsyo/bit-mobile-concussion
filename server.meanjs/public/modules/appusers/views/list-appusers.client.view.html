@@ -1,0 +1,21 @@
+<section data-ng-controller="AppusersController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Appusers</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="appuser in appusers" data-ng-href="#!/appusers/{{appuser._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				Posted on
+				<span data-ng-bind="appuser.created | date:'medium'"></span>
+				by
+				<span data-ng-bind="appuser.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="appuser.id"></h4>
+			<h4 class="list-group-item-heading" data-ng-bind="appuser.name"></h4>
+			<h4 class="list-group-item-heading" data-ng-bind="appuser.email"></h4>
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!appusers.$resolved || appusers.length">
+    	目前沒有使用者，是否要<a href="/#!/appusers/create">新增使用者</a>？
+    </div>
+</section>

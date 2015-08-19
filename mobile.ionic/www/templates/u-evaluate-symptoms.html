@@ -1,0 +1,16 @@
+﻿<ion-view title="症狀">
+  <ion-content class="padding">
+    <div class='list'>
+      <div class="item" style='height:60px;padding:auto;' ng-repeat="symptom in symptoms">
+        <div class="eval-item item-label-left item-label-right">
+          <label class='symp-name' ng-bind="symptom.name"></label>
+          <input class='symp-range' type='range' name='intensity' min='0' max='10' value='{{symptom.value}}' ng-model='symptom.value' />
+          <label class='symp-value' ng-bind="symptom.value"></label>
+        </div>
+      </div>
+    </div>
+    <button class="button button-block" ng-click="generateResponse()">
+      記錄
+    </button>
+  </ion-content>
+</ion-view>

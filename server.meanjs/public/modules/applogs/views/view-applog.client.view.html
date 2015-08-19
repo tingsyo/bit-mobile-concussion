@@ -1,0 +1,32 @@
+<section data-ng-controller="ApplogsController" data-ng-init="findOne()">
+	<div class="page-header">
+		<h1 data-ng-bind="applog.time | date:'yyyy/MM/dd HH:mm:ss'"></h1>
+	</div>
+	<div class="list-group">
+			<div class="list-group-item">
+				<label>User ID: </label>
+				<span data-ng-bind="applog.userid"></span>
+			</div>
+			<div class="list-group-item">
+				<label>Overall Score: </label>
+			  <span data-ng-bind="applog.overall"></span>
+			</div>
+			<a data-ng-repeat="symptom in applog.symptoms" class="list-group-item"> {{symptom}} </a>
+	</div>
+	<div class="pull-right" data-ng-show="(authentication.user)">
+		<a class="btn btn-primary" href="/#!/applogs/{{applog._id}}/edit">
+			<i class="glyphicon glyphicon-edit"></i>
+		</a>
+		<a class="btn btn-primary" data-ng-click="remove();">
+			<i class="glyphicon glyphicon-trash"></i>
+		</a>
+	</div>
+	<small>
+		<em class="text-muted">
+			Synced on
+			<span data-ng-bind="applog.created | date:'yyyy/MM/dd HH:mm:ss'"></span>
+			by
+			<span data-ng-bind="applog.userid"></span>
+		</em>
+	</small>
+</section>

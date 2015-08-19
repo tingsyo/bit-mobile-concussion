@@ -1,0 +1,23 @@
+﻿<ion-view title="整體影響">
+  <ion-content class="padding">
+    <div class='list'>
+      <h3>噢噢~我現在不舒服…</h3>
+      <p>這樣的不舒服影響我___分</p>
+      <h3 class='overall-symp-value' ng-bind="overall.value"></h3>
+      <div class="item">
+        <div class="eval-item item-label-left item-label-right">
+          <label>沒有影響</label>
+          <input class='symp-range' type='range' name='intensity' min='0' max='10' value='{{overall.value}}' ng-model='overall.value' />
+          <label>影響很大</label>
+        </div>
+      </div>
+      <div class="eval-scale item"></div>
+    </div>
+    <a class="item button button-block" href="#/tab/evaluatesymptoms">
+      個別症狀
+    </a>
+    <div class="button-bar">
+        <a class="button button-stable" href="#" ng-click="registerPush()">設置提醒</a>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,20 @@
+﻿<ion-view title="修改資料">
+  <ion-content class="padding">
+    <div class="list list-inset">
+        <label class="item item-input">
+            <span class="input-label">編號*：</span>
+            <input type="text" ng-model="userinfo.id"></input>
+            
+        </label>
+        <label class="item item-input">
+            <span class="input-label">受傷日期*：</span>
+            <input type="date" ng-model="userinfo.incidentDate"></input>
+        </label>
+        <label class="item item-input">
+            <span class="input-label">PCS症狀：</span>
+            <input type="text" ng-model="userinfo.symptoms" ng-bind="userinfo.symptoms"></input>
+        </label>
+    </div>
+    <a href="#/tab/profile" class="button button-block button-calm" ng-click="modifyProfile()">確定修改</a>
+  </ion-content>
+</ion-view>

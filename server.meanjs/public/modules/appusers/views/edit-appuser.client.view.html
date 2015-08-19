@@ -1,0 +1,41 @@
+<section data-ng-controller="AppusersController" data-ng-init="findOne()">
+    <div class="page-header">
+        <h1>Edit Appuser</h1>
+    </div>
+    <div class="col-md-12">
+        <form class="form-horizontal" data-ng-submit="update()" novalidate>
+            <fieldset>
+            <!--
+                <div class="form-group">
+                    <label class="control-label" for="name">Name</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="appuser.name" id="name" class="form-control" placeholder="Name" required>
+                    </div>
+                </div>
+            -->
+                <!-- from create -->
+                <div class="form-group">
+                    <label class="control-label" for="appuserid">編號：</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="appuser.id" id="id" class="form-control" placeholder="編號" required>
+                    </div>
+                    <label class="control-label" for="incidentDate">受傷日期：</label>
+                    <div class="controls">
+                        <input type="date" data-ng-model="appuser.incidentDate" id="incidentDate" class="form-control" value="appuser.incidentDate" required>
+                    </div>
+                    <label class="control-label" for="email">電子郵件（通知）：</label>
+                    <div class="controls">
+                        <input type="email" data-ng-model="appuser.email" id="email" class="form-control" placeholder="who@where.com" required>
+                    </div>
+                </div>
+                <!-- from create -->
+                <div class="form-group">
+                    <input type="submit" value="Update" class="btn btn-default">
+                </div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+            </fieldset>
+        </form>
+    </div>
+</section>
