@@ -1,6 +1,6 @@
 angular.module('starter.controllers', ['ionic','ngCordova'])
 
-.controller('MainCtrl', function($scope, $location, $http, $window, UserInfo, UserRecords, Diaries, $rootScope, $cordovaLocalNotification, DataSync) {
+.controller('MainCtrl', function($scope, $location, $http, $window, UserInfo, UserRecords, Diaries, $rootScope, $cordovaLocalNotification, ServerSettings) {
     // Check user profile is set
     var userInfo = UserInfo.all();
     if(userInfo.id === ""){
@@ -43,8 +43,7 @@ angular.module('starter.controllers', ['ionic','ngCordova'])
         // Retrieve all records
         $scope.userRecords = UserRecords.all();
         // Configure http post parameters
-        var serverurl = "http://210.71.197.32:3300/applogs";
-        //var serverurl = "http://localhost:3300/applogs";
+        var serverurl = ServerSettings.serverurl + "applogs";
         console.log($scope.userRecords.length.toString()+' local records found.');
         // Sync unsynced records
         var rcount = 0;
@@ -92,8 +91,7 @@ angular.module('starter.controllers', ['ionic','ngCordova'])
     $scope.syncDiaries = function(){
         $scope.diaries = Diaries.all();
         // Configure http post parameters
-        var serverurl = "http://210.71.197.32:3300/articles";
-        //var serverurl = "http://localhost:3300/articles";
+        var serverurl = ServerSettings.serverurl + "articles";
         console.log($scope.diaries.length.toString()+' local diariy entries found.');
         // Sync unsynced records
         var dcount = 0;

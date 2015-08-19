@@ -1,42 +1,11 @@
 angular.module('starter.services', [])
 
 /**
-* Sync data with the server
+* Settings of the server
 */
-.factory('DataSync', function ( $http ) {
-    var promise;
-    var syncResult = {
-        syncData: function(rec, serverurl) {
-            if ( !promise ) {
-                // $http returns a promise, which has a then function, which also returns a promise
-                promise = $http({
-                    method: 'POST',
-                    url:serverurl,
-                    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-                    transformRequest: function(obj) {
-                        var str = [];
-                        for(var p in obj)
-                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
-                        return str.join("&");
-                    },
-                    data: rec
-                })
-                .then(function(response){
-                    // The then function here is an opportunity to modify the response
-                    // The return value gets picked up by the then in the controller.
-                        console.log("sync complete: "+rec.userid+" : "+rec.time);
-                        return 1;
-                    },
-                    function(err){
-                        console.log(err);
-                        return 0;
-                    }
-                );
-            }
-            return promise; // Return the promise to the controller
-        }
-    };
-    return syncResult;
+.factory('ServerSettings', function ( $http ) {
+    var serverurl = "http://192.168.1.101:3300/"
+    return serverurl;
 })
 
 /**
