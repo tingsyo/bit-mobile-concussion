@@ -30,18 +30,19 @@ cd ../server.meanjs
 npm install
 ```
 
-To start the server, go to the server.meanjs directory:
+To start the server, go to the `server.meanjs` directory:
 ```shell
 node srver.js
 ```
 
-To test the mobile app in a browser, go to the mobile.ionic directory:
+To test the mobile app in a browser, go to the `mobile.ionic` directory:
 ```shell
 ionic serve
 ```
 
 Note: the `sync data with server` functionality will not work until a proper `serverurl` is configured in the file `mobile.ionic/www/js/server.js`.
 
+Note: to build actual moble apps, please see [Ionic documentation](http://ionicframework.com/getting-started/).
 
 ---
 # License 
