@@ -49,4 +49,4 @@ ionic serve
 ---
 # License
 The code is released under a permissive [MIT](http://opensource.org/licenses/MIT) license. This means you can use Ionic in your own personal or commercial projects for free.  
-The copyright of the intervention content and the delivery mechanisms (mainly in the file `mobile.ionic/www/js/server.js`) is owned by [Dr. YANG, Chi-Cheng](http://163.25.111.53/YCC/YCC_index.htm) and [Ms. Xu, Rong-Xuan](#). (© 2014-2015 Yang and Xu All Rights Reserved). Permissions must be obtained for any type of use of the content.
+The copyright of the intervention content and the delivery mechanisms (mainly in the file `mobile.ionic/www/js/server.js`) is owned by [Dr. YANG, Chi-Cheng](http://163.25.111.53/YCC/YCC_index.htm), [Ms. Lin, Rong-Syuan](#), and [Ms. Lai, Wen-Hsuan](#). (© 2014-2015 Yang All Rights Reserved). [Permissions must be obtained](ccy.tbiteam@gmail.com) for any type of use of the content.
