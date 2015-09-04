@@ -10,7 +10,7 @@ This repo hosts an example of mobile intervention system for concussion clinic. 
 And the folder `doc` contains documentations detail the design and implementation of this system. Following are a short summary about how to get a quick start of this system.
 
 ## Quick Start
-The system was implemented with full-stack javascript.  The mobile part used `[Ionic](http://ionicframework.com/) framework` and the server part used `[MEAN.JS](http://meanjs.org/)` solution.  Both solutions depend on `[node.js](https://nodejs.org/)`, so make sure your system has `node`, `npm`, `ionic`, and `MongoDb` installed and configured before you start.
+The system was implemented with full-stack javascript.  The mobile part used [`Ionic`](http://ionicframework.com/) framework and the server part used [`MEAN.JS`](http://meanjs.org/) solution.  Both solutions depend on [`node.js`](https://nodejs.org/), so make sure your system has `node`, `npm`, `ionic`, and `MongoDb` installed and configured before you start.
 
 - [Install `node.js` and `npm`](https://nodejs.org/download/)
 
