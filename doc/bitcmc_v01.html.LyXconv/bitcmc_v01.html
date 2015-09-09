@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="generator" content="http://www.nongnu.org/elyxer/"/>
+<meta name="create-date" content="2015-09-09"/>
+<link rel="stylesheet" href="http://elyxer.nongnu.org/lyx.css" type="text/css" media="all"/>
+<title>Behavioral Intervention through Mobile Devices: a framework and an example</title>
+</head>
+<body>
+<div id="globalWrapper">
+<h1 class="title">
+Behavioral Intervention through Mobile Devices: a framework and an example
+</h1>
+<h2 class="Date">
+2015/07/01 
+</h2>
+<h2 class="author">
+Ting-Shuo Yo
+</h2>
+<div class="abstract">
+<p class="abstract-message">
+Abstract
+</p>
+Here we reported a framework for conducting behavioral intervention through mobile devices with an implemented example for concussion clinic. The proposed framework has a design with separate modules for the clinical content and the technological infrastructure, and hence can be adapted into other applications by replacing the content. The implementation used a web-app front-end (<a class="URL" href="http://ionicframework.com/">ionic framework</a>) and a full-stack JavaScript back-end (<a class="URL" href="http://meanjs.org/">MEAN.js</a>), and the source code can be found on GitHub.
+</div>
+<h1 class="Section">
+<a class="toc" name="toc-Section-1">1</a> Introduction
+</h1>
+<div class="Unindented">
+Behavioral intervention technologies (BITs) enable clinic workers to apply behavioral and psychological intervention through digital media. This approach provide new opportunities and strategic advantages in supporting physical and mental health. In this report, we present a real-world BIT design using mobile and cloud technologies for concussion clinic, along with a working prototype. 
+</div>
+<h1 class="Section">
+<a class="toc" name="toc-Section-2">2</a> Project Statement 
+</h1>
+<div class="Unindented">
+The conventional intervention of concussion patients is unidirectional. The patients receive a booklet after the clinic visit, and whenever a symptom reoccurs, the patient can only follow the instructions on the booklet or visit the clinic again. Meanwhile, the clinic workers have no information about the patients until they come to the clinic again. Thanks to the telecommunication technology today, most patients have their own smartphone and are connected to internet most of the time. This infrastructure provides an advantage to keep the patients and the clinic workers connected and interventions can be delivered interactively. 
+</div>
+<div class="Indented">
+In this project, we proposed a design leverages the smartphone and cloud technologies for better behavioral intervention in concussion clinic. The proposed system provides three main benefits: (1) real-time tracking, (2) responsive interaction, and (3) enabling large scale data collection for future analysis. The participated patients will install a mobile app with a simple configuration during their clinic visit, and they can use the app to record their own condition any time. A set of predefined logic will determine what intervention to deliver according to the severity of the recorded symptoms, and automatically synchronize the records to the cloud server for clinic workers to review and perform further analysis. 
+</div>
+<h1 class="Section">
+<a class="toc" name="toc-Section-3">3</a> System Analysis and Design
+</h1>
+<div class="Unindented">
+In order to fulfill the requirements of real-time tracking, interactive intervention, and data collection, a system infrastructure with mobile client and web server is needed. The general description of the system is illustrated in figure 1. Hence, the design of the system can be divided into two major parts: the mobile client (mobile app) and the cloud data management (web app). 
+</div>
+<div class="Indented">
+<div class="float">
+<a class="Label" name="Figure-1"> </a><div class="figure">
+<img class="embedded" src="figures/Slide1.png" alt="figure figures/Slide1.png" style="width: 12cm; max-width: 1280px; height: auto; max-height: 720px;"/>
+<div class="caption">
+Figure 1 The general architechture of the system.
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="Indented">
+Consulting with the clinic workers, we categorized 3 major user scenario:
+</div>
+<ol>
+<li>
+Initialization phase.
+</li>
+<li>
+Follow up evaluation and responsive intervention.
+</li>
+<li>
+Follow up monitoring.
+</li>
+
+</ol>
+<div class="Unindented">
+Each of the scenario involves different parts of the system. The sub-systems used in each scenario are shown in figure 2.
+</div>
+<div class="Indented">
+<div class="float">
+<a class="Label" name="Figure-2"> </a><div class="figure">
+<img class="embedded" src="figures/Slide2.png" alt="figure figures/Slide2.png" style="width: 12cm; max-width: 1280px; height: auto; max-height: 720px;"/>
+<div class="caption">
+Figure 2 System overview and three major user scenarioes.
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="Indented">
+In the initialization phase, the clinic worker has to setup an user ID for the participated patient, and install the mobile app on the patient’s smartphone. After the clinic visit, the paticippated patient will use the mobile app to record his/her own condition and the receive corresponding intervention. The mobile app will automatically synchronize the records to the cloud server, and hence the clinic worker can perform follow up monitoring and analysis without disturbing the participant. Figure 3, 4, and 5 illustrate the user flow of each scenario.
+</div>
+<div class="Indented">
+<div class="float">
+<a class="Label" name="Figure-3"> </a><div class="figure">
+<img class="embedded" src="figures/Slide3.png" alt="figure figures/Slide3.png" style="width: 12cm; max-width: 1280px; height: auto; max-height: 540px;"/>
+<div class="caption">
+Figure 3 User scenario flow of the initialization phase.
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="Indented">
+<div class="float">
+<a class="Label" name="Figure-4"> </a><div class="figure">
+<img class="embedded" src="figures/Slide4.png" alt="figure figures/Slide4.png" style="width: 12cm; max-width: 1280px; height: auto; max-height: 448px;"/>
+<div class="caption">
+Figure 4 User scenario flow of the follow up evaluation and responsive intervention.
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="Indented">
+<div class="float">
+<a class="Label" name="Figure-5"> </a><div class="figure">
+<img class="embedded" src="figures/Slide5.png" alt="figure figures/Slide5.png" style="width: 12cm; max-width: 1280px; height: auto; max-height: 449px;"/>
+<div class="caption">
+Figure 5 User scenario flow of the follow up monitoring.
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="Indented">
+Further system analysis on the mobile app was conducted with the clinic professionals. Figure 6 shows the work flow of the mobile app.
+</div>
+<div class="Indented">
+<div class="float">
+<a class="Label" name="Figure-6"> </a><div class="figure">
+<img class="embedded" src="figures/flowchart_20150908.png" alt="figure figures/flowchart_20150908.png" style="width: 12cm; max-width: 670px; height: auto; max-height: 537px;"/>
+<div class="caption">
+Figure 6 The work flow of the mobile app.
+</div>
+
+</div>
+
+</div>
+
+</div>
+<h1 class="Section">
+<a class="toc" name="toc-Section-4">4</a> Implementation and Deployment
+</h1>
+<div class="Unindented">
+The system was implemented with full-stack javascript. The mobile part used <a class="URL" href="http://ionicframework.com/">ionic framework</a> and the server part used <a class="URL" href="http://meanjs.org/">MEAN.js</a> solution. The source code can be found at <a class="URL" href="https://github.com/tingsyo/bit-mobile-concussion">Github</a> under the <a class="URL" href="http://opensource.org/licenses/MIT">MIT license</a>, and the deployment instruction can also be found on the <a class="URL" href="https://github.com/tingsyo/bit-mobile-concussion">Github</a>.
+</div>
+<h1 class="Section">
+<a class="toc" name="toc-Section-5">5</a> Concluding Remark
+</h1>
+<div class="Unindented">
+The system is currently in testing phase, so we will update the conclusion afterward.
+</div>
+
+<hr class="footer"/>
+<div class="footer" id="generated-by">
+Document generated by <a href="http://elyxer.nongnu.org/">eLyXer 1.2.5 (2013-03-10)</a> on <span class="create-date">2015-09-09T17:36:41.619000</span>
+</div>
+</div>
+</body>
+</html>

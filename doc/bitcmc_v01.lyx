@@ -1,0 +1,484 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass extarticle
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format pdf
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 0
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Behavioral Intervention through Mobile Devices: a framework and an example
+\end_layout
+
+\begin_layout Date
+2015/07/01 
+\end_layout
+
+\begin_layout Author
+Ting-Shuo Yo
+\end_layout
+
+\begin_layout Abstract
+Here we reported a framework for conducting behavioral intervention through
+ mobile devices with an implemented example for concussion clinic.
+ The proposed framework has a design with separate modules for the clinical
+ content and the technological infrastructure, and hence can be adapted
+ into other applications by replacing the content.
+ The implementation used a web-app front-end (
+\begin_inset CommandInset href
+LatexCommand href
+name "ionic framework"
+target "http://ionicframework.com/"
+
+\end_inset
+
+) and a full-stack JavaScript back-end (
+\begin_inset CommandInset href
+LatexCommand href
+name "MEAN.js"
+target "http://meanjs.org/"
+
+\end_inset
+
+), and the source code can be found on GitHub.
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+Behavioral intervention technologies (BITs) enable clinic workers to apply
+ behavioral and psychological intervention through digital media.
+ This approach provide new opportunities and strategic advantages in supporting
+ physical and mental health.
+ In this report, we present a real-world BIT design using mobile and cloud
+ technologies for concussion clinic, along with a working prototype.
+ 
+\end_layout
+
+\begin_layout Section
+Project Statement 
+\end_layout
+
+\begin_layout Standard
+The conventional intervention of concussion patients is unidirectional.
+ The patients receive a booklet after the clinic visit, and whenever a symptom
+ reoccurs, the patient can only follow the instructions on the booklet or
+ visit the clinic again.
+ Meanwhile, the clinic workers have no information about the patients until
+ they come to the clinic again.
+ Thanks to the telecommunication technology today, most patients have their
+ own smartphone and are connected to internet most of the time.
+ This infrastructure provides an advantage to keep the patients and the
+ clinic workers connected and interventions can be delivered interactively.
+ 
+\end_layout
+
+\begin_layout Standard
+In this project, we proposed a design leverages the smartphone and cloud
+ technologies for better behavioral intervention in concussion clinic.
+ The proposed system provides three main benefits: (1) real-time tracking,
+ (2) responsive interaction, and (3) enabling large scale data collection
+ for future analysis.
+ The participated patients will install a mobile app with a simple configuration
+ during their clinic visit, and they can use the app to record their own
+ condition any time.
+ A set of predefined logic will determine what intervention to deliver according
+ to the severity of the recorded symptoms, and automatically synchronize
+ the records to the cloud server for clinic workers to review and perform
+ further analysis.
+ 
+\end_layout
+
+\begin_layout Section
+System Analysis and Design
+\end_layout
+
+\begin_layout Standard
+In order to fulfill the requirements of real-time tracking, interactive
+ intervention, and data collection, a system infrastructure with mobile
+ client and web server is needed.
+ The general description of the system is illustrated in figure 1.
+ Hence, the design of the system can be divided into two major parts: the
+ mobile client (mobile app) and the cloud data management (web app).
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/Slide1.PNG
+	lyxscale 20
+	width 12cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The general architechture of the system.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Consulting with the clinic workers, we categorized 3 major user scenario:
+\end_layout
+
+\begin_layout Enumerate
+Initialization phase.
+\end_layout
+
+\begin_layout Enumerate
+Follow up evaluation and responsive intervention.
+\end_layout
+
+\begin_layout Enumerate
+Follow up monitoring.
+\end_layout
+
+\begin_layout Standard
+Each of the scenario involves different parts of the system.
+ The sub-systems used in each scenario are shown in figure 2.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/Slide2.PNG
+	lyxscale 20
+	width 12cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+System overview and three major user scenarioes.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the initialization phase, the clinic worker has to setup an user ID for
+ the participated patient, and install the mobile app on the patient's smartphon
+e.
+ After the clinic visit, the paticippated patient will use the mobile app
+ to record his/her own condition and the receive corresponding intervention.
+ The mobile app will automatically synchronize the records to the cloud
+ server, and hence the clinic worker can perform follow up monitoring and
+ analysis without disturbing the participant.
+ Figure 3, 4, and 5 illustrate the user flow of each scenario.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/Slide3.PNG
+	lyxscale 20
+	width 12cm
+	BoundingBox 0bp 0bp 1280bp 540bp
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+User scenario flow of the initialization phase.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/Slide4.PNG
+	lyxscale 20
+	width 12cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+User scenario flow of the follow up evaluation and responsive intervention.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/Slide5.PNG
+	lyxscale 20
+	width 12cm
+	BoundingBox 0bp 0bp 1280bp 449bp
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+User scenario flow of the follow up monitoring.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Further system analysis on the mobile app was conducted with the clinic
+ professionals.
+ Figure 6 shows the work flow of the mobile app.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/flowchart_20150908.png
+	lyxscale 20
+	width 12cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The work flow of the mobile app.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Implementation and Deployment
+\end_layout
+
+\begin_layout Standard
+The system was implemented with full-stack javascript.
+ The mobile part used 
+\begin_inset CommandInset href
+LatexCommand href
+name "ionic framework"
+target "http://ionicframework.com/"
+
+\end_inset
+
+ and the server part used 
+\begin_inset CommandInset href
+LatexCommand href
+name "MEAN.js"
+target "http://meanjs.org/"
+
+\end_inset
+
+ solution.
+ The source code can be found at 
+\begin_inset CommandInset href
+LatexCommand href
+name "Github"
+target "https://github.com/tingsyo/bit-mobile-concussion"
+
+\end_inset
+
+ under the 
+\begin_inset CommandInset href
+LatexCommand href
+name "MIT license"
+target "http://opensource.org/licenses/MIT"
+
+\end_inset
+
+, and the deployment instruction can also be found on the 
+\begin_inset CommandInset href
+LatexCommand href
+name "Github"
+target "https://github.com/tingsyo/bit-mobile-concussion"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Concluding Remark
+\end_layout
+
+\begin_layout Standard
+The system is currently in testing phase, so we will update the conclusion
+ afterward.
+\end_layout
+
+\end_body
+\end_document
