@@ -101,6 +101,15 @@ angular.module('starter', ['ionic','ngCordova', 'starter.controllers', 'starter.
           }
         }
     })
+    .state('tab.tutorial', {
+        url: '/tutorial',
+        views: {
+          'main-screen': {
+            templateUrl: 'templates/u-tutorial.html',
+            controller: 'TutorialCtrl'
+          }
+        }
+    })
     .state('tab.contact-us', {
         url: '/contact-us',
         views: {

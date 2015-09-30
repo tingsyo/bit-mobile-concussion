@@ -596,6 +596,10 @@ angular.module('starter.controllers', ['ionic','ngCordova'])
     };
 })
 
+.controller('TutorialCtrl', function($scope, $ionicPopup) {
+
+})
+
 .controller('StaticInterventionCtrl', function($scope, $ionicPopup) {
     $scope.isCi1Open = false;
     $scope.intContent = [
