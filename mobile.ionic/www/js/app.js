@@ -26,10 +26,6 @@ angular.module('ionic.utils',[])
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic','ngCordova', 'starter.controllers', 'starter.services', 'nvd3', 'ngCordova'])
-// Add constant for CORS
-.constant('ApiEndpoint', {
-  url: 'http://localhost:8100'
-})
 
 .run(function($ionicPlatform, $rootScope, $timeout, $state, $cordovaLocalNotification) {
     // Starter

@@ -121,6 +121,19 @@ angular.module('starter.controllers', ['ionic','ngCordova'])
     // Automatic syn data on start
     $scope.syncRecords();
     $scope.syncDiaries();
+    // Check the time since accident
+    // Retrieve only past 7 days of data
+    var today = new Date();
+    var watchPeriod = new Date(today.getFullYear(), today.getMonth(), today.getDate() - 13);
+    var incidentDay = Date.parse(userInfo.incidentDate);
+    if(incidentDay < watchPeriod){
+        console.log("More than 2 weeks since incident, go to main screen");
+        $location.path('/tab/main');
+    } else {
+        console.log("Less than 2 weeks since incident, go to evaluation");
+        $location.path('/tab/evaluation');
+    }
+    //
 })
 
 .controller('DiaryCtrl', function($scope, $ionicModal, $ionicPopup, Diaries) {
@@ -295,7 +308,7 @@ angular.module('starter.controllers', ['ionic','ngCordova'])
         //console.log($scope.interventionToDeliver);
         $scope.showIntervention($scope.interventionToDeliver);
         // Register notification
-        $scope.registerPush();
+        $scope.registerPush($scope.overall);
         // Back to main page
         $location.path('/tab/main');   // Go to home page
     };
@@ -324,9 +337,21 @@ angular.module('starter.controllers', ['ionic','ngCordova'])
         });
     }
     // Add event notification
-    $scope.registerPush = function(){
-        $scope.addNotification(101, 0.5, '請問您的症狀有好轉嗎？');
-        $scope.addNotification(201, 1, '請問您對本系統的看法');
+    $scope.registerPush = function(overallScore){
+        if(overallScore <=5) {
+            console.log("整體干擾五分以下: 1hr/2hr");
+            $scope.addNotification(101, 60, '請問您的症狀有好轉嗎？');
+            $scope.addNotification(201, 120, '請問您的症狀有好轉嗎？');            
+        } else if (overallScore <= 8){
+            console.log("整體干擾6~8: 2hr/6hr");
+            $scope.addNotification(101, 120, '請問您的症狀有好轉嗎？');
+            $scope.addNotification(201, 360, '請問您的症狀有好轉嗎？');            
+        } else {
+            console.log("整體干擾>8: 4hr/8hr");
+            $scope.addNotification(101, 240, '請問您的症狀有好轉嗎？');
+            $scope.addNotification(201, 480, '請問您的症狀有好轉嗎？');            
+        }
+
     };
     // cordova local notification
 })
